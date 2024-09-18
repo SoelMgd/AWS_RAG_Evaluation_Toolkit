@@ -1,8 +1,9 @@
 credentials.txt
+aws_credentials.cfg
 oldsetup.py
 requirements.txt
 *.egg-info/
-
+build/
 prod_venv/
 old_files/
 Examples/Results/

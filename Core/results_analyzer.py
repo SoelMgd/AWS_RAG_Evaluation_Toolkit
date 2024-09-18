@@ -148,7 +148,7 @@ class ResultsAnalyzer:
                 continue
 
             metrics_dict = self.results[file_name]
-            print(20 * '=', file_name, (30 - len(file_name)) * '=')
+            print(20 * '=', file_name, (70 - len(file_name)) * '=')
 
             for metric, series in metrics_dict.items():
                 average_score = series.mean()
