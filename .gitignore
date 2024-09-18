@@ -1,0 +1,12 @@
+# Ignorer le fichier de credentials
+credentials.txt
+oldsetup.py
+
+# Ignorer le répertoire de l'environnement virtuel
+prod_venv/
+
+# Ignorer les fichiers __pycache__ générés par Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
