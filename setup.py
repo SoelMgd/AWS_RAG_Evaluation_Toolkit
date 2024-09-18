@@ -3,7 +3,9 @@ from setuptools import setup, find_packages
 setup(
     name='AWS_RAG_Toolkit',
     version='0.1',
-    packages=find_packages(),
+    packages=find_packages(include=['Core', 'Core.*']),
     include_package_data=True,
-    # Ne spécifiez pas install_requires ici
+    install_requires=[
+        # Liste de tes dépendances
+    ],
 )

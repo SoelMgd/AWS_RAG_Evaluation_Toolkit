@@ -6,6 +6,7 @@ oldsetup.py
 
 # Ignorer le répertoire de l'environnement virtuel
 prod_venv/
+old_files/
 
 # Ignorer les fichiers __pycache__ générés par Python
 __pycache__/
