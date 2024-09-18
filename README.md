@@ -1,34 +1,62 @@
-# AWS_RAG_Evaluation_Toolkit
+# AWS RAG Evaluation Toolkit
 
-
-This repository provides a toolkit for developpers to evaluate RAG models built with `llama_index` on AWS.
-The toolkit is designed to help you experiment with different configurations of HuggingFace embedding models and LLMs available on AWS BedrockChat and to quickly iterate with metrics to identify the most effective setups for your use case.
-
+This repository provides a toolkit for developers to evaluate RAG (Retrieval-Augmented Generation) models built with `llama_index` on AWS. The toolkit is designed to help you experiment with different configurations of HuggingFace embedding models and LLMs available on AWS BedrockChat. It enables you to quickly iterate using various metrics to identify the most effective configurations for your use case.
 
 ## Components
 
 - **`RAGConfig`**: Configure your RAG setup with embedding models, LLMs, and prompts.
 - **`RAGEvaluate`**: Evaluate the performance of different configurations using various metrics based on RAGAS.
-- **`AnalyzeResults`**: Compare configuration results and display distributions of different metrics.
+- **`AnalyzeResults`**: Compare configuration results and visualize distributions of different evaluation metrics.
 
 ## Getting Started
 
-1. **Create a venv**
+1. **Create a virtual environment**:
+    ```bash
+    python -m venv dev_environment
+    ```
 
-   python -m venv dev_environment
+2. **Activate the virtual environment**:
+    - On macOS/Linux:
+      ```bash
+      source dev_environment/bin/activate
+      ```
+    - On Windows:
+      ```bash
+      source dev_environment/Scripts/activate
+      ```
 
-2. **Ativate it**
-   source dev_environment/Scripts/activate
+3. **Install dependencies**:
+    ```bash
+    pip install -r requirements.txt
+    ```
 
-3. **Install dependencies**
-   pip install -r requirements.txt
-
-4. **Add your AWS Credentials**
-   in a aws_credentials.cfg write:
+4. **Add your AWS credentials**:
+   Create a file named `aws_credentials.cfg` and add the following content:
+    ```ini
     [default]
-    aws_access_key_id = ACCESS_KEY
-    aws_secret_access_key = SECRET_KEY
-    region_name = REGION
+    aws_access_key_id = YOUR_ACCESS_KEY
+    aws_secret_access_key = YOUR_SECRET_KEY
+    region_name = YOUR_REGION
+    ```
 
-It's done, you can follow the examples notebook to create a testset from your documents and test different RAG configuration on it! Choose the the configuration the most suited to your use-case
-(hallucinaton-reduction etc.)
+Once everything is set up, follow the example notebooks to create a test set from your documents and test different RAG configurations. This allows you to identify the best configuration for your specific use case (e.g., hallucination reduction, etc.).
+
+## Contributing
+
+Contributions are welcome! If you would like to improve the project, follow these steps:
+
+1. **Fork the repository** to your GitHub account.
+2. **Create a new branch** with a descriptive name for your feature or bugfix:
+    ```bash
+    git checkout -b feature-name
+    ```
+
+3. **Test your changes** to ensure everything works as expected.
+sh origin feature-name
+    ```
+
+5. **Create a pull request** from your branch to the `main` branch of this repository.
+
+---
+
+This toolkit aims to make it easier to evaluate RAG models on AWS. Feel free to reach out with suggestions or questions!
