@@ -1,14 +1,13 @@
-# Ignorer le fichier de credentials
 credentials.txt
 oldsetup.py
-
+requirements.txt
 *.egg-info/
 
-# Ignorer le répertoire de l'environnement virtuel
 prod_venv/
 old_files/
+Examples/Results/
+Examples/Testsets/
 
-# Ignorer les fichiers __pycache__ générés par Python
 __pycache__/
 *.pyc
 *.pyo

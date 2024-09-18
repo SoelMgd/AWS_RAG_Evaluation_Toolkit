@@ -1,36 +1,42 @@
 {
     "results": {
         "faithfulness": {
-            "0": 0.2,
-            "1": 0.6666666666666666,
-            "2": 0.7777777777777778
+            "0": 0.375,
+            "1": 0.625,
+            "2": 0.5,
+            "3": 1.0
         },
         "answer_relevancy": {
             "0": 0.9989146213272081,
-            "1": 0.9546418360839231,
-            "2": 0.931116783754856
+            "1": 0.9703644150629079,
+            "2": 0.920570219909627,
+            "3": 0.9723720321512066
         },
         "context_precision": {
             "0": 0.0,
             "1": 0.99999999995,
-            "2": 0.0
+            "2": 0.0,
+            "3": 0.0
         },
         "context_recall": {
             "0": 1.0,
             "1": 0.5,
-            "2": 0.4
+            "2": 0.3333333333333333,
+            "3": 0.5
         }
     },
     "testset": {
         "question": [
             "What are some key points or best practices typically covered in secure coding guidelines for software development?",
             "What is the role and responsibility of the Technical Account Manager (TAM) in the AWS support team for Air Liquide?",
-            "What are the key steps involved in setting up TLS in AWS ACM (AWS Certificate Manager)?"
+            "What are the key steps involved in setting up TLS in AWS ACM (AWS Certificate Manager)?",
+            "What is the significance of the 'Operations' email address in the 'Alternate Contacts' section of an AWS account?"
         ],
         "ground_truth": [
             "Some key points and best practices typically covered in secure coding guidelines for software development include input validation, output encoding, authentication and access control, cryptography, error handling, data protection, secure communications, and keeping software up-to-date with the latest security patches and updates.",
             "The Technical Account Manager (TAM) for Air Liquide's AWS account has the following role and responsibilities: - Coordinate access to proactive/preventative programs and AWS subject matter experts - Provide consultative architectural guidance in the context of Air Liquide's applications and use-cases - Act as the primary point of contact for questions about the AWS Roadmap or submitting Product Feature Requests (PFRs) - Get involved and coordinate AWS resources in case of P1 (critical) incidents to work towards resolution",
-            "The key steps involved in setting up TLS in AWS ACM (AWS Certificate Manager) based on the given context are:\n\n1. Request an internal certificate\n2. Set up TLS in AWS ACM\n3. Upload your certificate to AWS ACM either via the Console or the AWS CLI\n4. Add your certificate to your Load Balancer\n5. Test the setup by using nslookup and browsing to the application URL"
+            "The key steps involved in setting up TLS in AWS ACM (AWS Certificate Manager) based on the given context are:\n\n1. Request an internal certificate\n2. Set up TLS in AWS ACM\n3. Upload your certificate to AWS ACM either via the Console or the AWS CLI\n4. Add your certificate to your Load Balancer\n5. Test the setup by using nslookup and browsing to the application URL",
+            "The 'Operations' email address in the 'Alternate Contacts' section of an AWS account is important for receiving notifications and alerts related to the account. If this email address is not properly configured, the user may not receive important communications from AWS, such as billing alerts or service updates."
         ],
         "contexts": [
             [
@@ -44,12 +50,17 @@
             [
                 "Set up TLS in AWS ACM",
                 "Import your certificate into ACM\n\nTo upload your certificate to AWS ACM either via the Console or the AWS CLI, please follow the official AWS ACM User Guide\n\n:::caution\n\nNote the ARN of your certificate. It will be used as a reference in your CloudFormation templates.\n\n:::"
+            ],
+            [
+                "Update your accounts Operations Contact details\n\nIn order to make it easier for you to have operational information about your account, we are requesting you to update the __Operations contact__\u00a0details under __Alternate Contacts__ of your account information.",
+                "Procedure\n\n1. Log into your account with the federation access and using an admin profile\n1. Go to the My Account section of the console ()\n1. Modify the operations contact as shown below:\n    - Click on the Edit button\n    - Indicate a contact. It should be Distribution List. You must avoid to set a single person email.\n\n!ops contact"
             ]
         ],
         "answer": [
-            "Here are some key points and best practices typically covered in secure coding guidelines for software development:\n\n- Use input validation and output encoding to prevent common vulnerabilities like cross-site scripting, SQL injection, etc. Validate all user input and encode any output displayed back to users.\n\n- Practice principle of least privilege - limit access and permissions as much as possible. Use role-based access controls and limit privileges to only what is absolutely necessary.\n\n- Handle errors securely - don't reveal sensitive error details to users that could aid an attack. Log errors securely and only show generic error messages to users.\n\n- Encrypt sensitive data in transit and at rest. Use secure protocols like TLS for data in transit and encrypt data stored in databases or files. \n\n- Adhere to secure authentication best practices - don't store plain text passwords, implement password complexity rules, use secure password hashing, enforce regular password changes, etc.\n\n- Sanitize all data parsed from untrusted sources before using it. Validate schemas, sanitize inputs, use allow lists instead of deny lists, etc.\n\n- Use parameterized queries to prevent SQL injection. Never dynamically build SQL queries with user input.\n\n- Implement appropriate logging and alerting to detect potential attacks or breaches. Log important events and monitor logs for anomalies.",
-            "Based on the provided context, the Technical Account Manager (TAM) is responsible for coordinating access to proactive/preventative programs and AWS subject matter experts. The TAM acts as the primary technical contact for Air Liquide and provides guidance on best practices for using AWS services. Their role is to help ensure Air Liquide is effectively leveraging AWS and getting the most out of their AWS Enterprise Support subscription.",
-            "Based on the provided context, the key steps involved in setting up TLS in AWS ACM are:\n\n1. Create a certificate in AWS ACM. This can be done via the AWS Console or AWS CLI.\n\n2. Upload your existing SSL/TLS certificate to AWS ACM. The context mentions following the official AWS ACM user guide for instructions on how to do this.\n\n3. Note down the ARN (Amazon Resource Name) of the certificate in ACM. This ARN will be needed later when referencing the certificate in CloudFormation templates. \n\n4. Import the certificate into ACM. This is also mentioned in the context as a key step.\n\nIn summary, the main steps are to create or upload a certificate into ACM, import it, and note down its ARN for future reference."
+            "Here are some key points and best practices typically covered in secure coding guidelines for software development:\n\n- Use input validation and sanitization to prevent injection attacks like SQL injection, cross-site scripting (XSS), etc. Validate all user input and sanitize output. \n\n- Use parameterized queries or prepared statements instead of dynamic SQL queries. This helps prevent SQL injection.\n\n- Implement proper authentication and authorization checks in the code to prevent broken access control issues.\n\n- Use encryption for sensitive data like passwords, credit cards, health information etc. Do not store or transmit plain text sensitive data.\n\n- Implement proper error and exception handling. Do not expose internal application details through errors and exceptions.\n\n- Use secure communication protocols like TLS for encryption and data integrity.\n\n- Adhere to principles like least privilege and fail-safe defaults in the code. Limit access and functionality to only what is absolutely necessary.\n\n- Avoid using banned or insecure API calls. Use the most updated secure libraries and frameworks.\n\n- Perform proper logging, auditing and input validation to prevent issues like path traversal, HTTP parameter pollution etc.\n\n- Follow security coding standards like OWASP Top 10, SANS Top 25, CWE/SANS Top 25 etc. during development.",
+            "Based on the provided context, the Technical Account Manager (TAM) plays an important role in coordinating and providing technical support for Air Liquide's AWS environments. \n\nThe TAM is responsible for:\n\n- Providing 24/7 technical support and coordinating access to AWS subject matter experts.\n\n- Delivering consultative architectural guidance aligned to Air Liquide's use cases and applications. \n\n- Helping manage Air Liquide's AWS environments proactively using tools and technologies.\n\n- Acting as the main point of contact to coordinate access to AWS programs and experts.\n\nSo in summary, the TAM serves as the key technical liaison between Air Liquide and AWS, providing strategic guidance and hands-on support to help optimize Air Liquide's use of AWS cloud services.",
+            "Based on the provided context, the key steps involved in setting up TLS in AWS ACM are:\n\n1. Create a certificate in AWS ACM. This can be done via the AWS Console or AWS CLI.\n\n2. Upload your existing SSL/TLS certificate to AWS ACM. The context mentions following the official AWS ACM user guide for instructions on how to do this.\n\n3. Note down the ARN (Amazon Resource Name) of the certificate in ACM. This ARN will be needed later when referencing the certificate in CloudFormation templates. \n\n4. Import the certificate into ACM. This is also mentioned in the context as a key step.\n\nIn summary, the main steps are creating/obtaining a valid SSL/TLS certificate, uploading it to ACM, noting down its ARN, and then importing it into ACM for use with AWS services. The context provides pointers to official AWS documentation for more detailed instructions on these steps.",
+            "The Operations email address in the Alternate Contacts section of an AWS account is used to receive important operational notifications and alerts from AWS. Setting this contact ensures that key personnel receive critical communications about the account, such as security issues, service disruptions, and billing notifications. It is recommended to use a distribution list rather than an individual's email address, to ensure coverage during absences. Maintaining an up-to-date Operations contact helps ensure the account is monitored and managed appropriately."
         ]
     }
 }
