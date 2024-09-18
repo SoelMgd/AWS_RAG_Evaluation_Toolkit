@@ -2,6 +2,8 @@
 credentials.txt
 oldsetup.py
 
+*.egg-info/
+
 # Ignorer le répertoire de l'environnement virtuel
 prod_venv/
 
