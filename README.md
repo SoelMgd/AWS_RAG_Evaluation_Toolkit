@@ -52,8 +52,6 @@ Contributions are welcome! If you would like to improve the project, follow thes
     ```
 
 3. **Test your changes** to ensure everything works as expected.
-sh origin feature-name
-    ```
 
 5. **Create a pull request** from your branch to the `main` branch of this repository.
 
