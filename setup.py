@@ -11,6 +11,7 @@ setup(
         'transformers==4.37.2',
         'llama-index-embeddings-huggingface==0.1.1',
         'accelerate==0.27.2',
+        'sentence-transformers==3.0.1',
         'pandas',
         'numpy',
         'ragas',
