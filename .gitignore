@@ -8,7 +8,7 @@ prod_venv/
 old_files/
 Examples/Results/
 Examples/Testsets/
-
+Examples/cloud-services
 __pycache__/
 *.pyc
 *.pyo

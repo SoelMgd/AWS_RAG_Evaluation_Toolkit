@@ -12,6 +12,8 @@ setup(
         'llama-index-embeddings-huggingface==0.1.1',
         'accelerate==0.27.2',
         'sentence-transformers==3.0.1',
+        'unstructured==0.15.12',
+        'Markdown==3.7',
         'pandas',
         'numpy',
         'ragas',

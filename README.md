@@ -41,20 +41,4 @@ This repository provides a toolkit for developers to evaluate RAG (Retrieval-Aug
 
 Once everything is set up, follow the example notebooks to create a test set from your documents and test different RAG configurations. This allows you to identify the best configuration for your specific use case (e.g., hallucination reduction, etc.).
 
-## Contributing
 
-Contributions are welcome! If you would like to improve the project, follow these steps:
-
-1. **Fork the repository** to your GitHub account.
-2. **Create a new branch** with a descriptive name for your feature or bugfix:
-    ```bash
-    git checkout -b feature-name
-    ```
-
-3. **Test your changes** to ensure everything works as expected.
-
-5. **Create a pull request** from your branch to the `main` branch of this repository.
-
----
-
-This toolkit aims to make it easier to evaluate RAG models on AWS. Feel free to reach out with suggestions or questions!
