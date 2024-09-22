@@ -1,7 +1,7 @@
 from setuptools import setup, find_packages
 
 setup(
-    name='AWS_RAG_Toolkit',
+    name='AWS_RAG_Evaluation_Toolkit',
     version='1.0.0', 
     packages=find_packages(), 
     install_requires=[
@@ -25,8 +25,7 @@ setup(
         'ipykernel'
     ],
     include_package_data=True,
-    description='Awesome project to evaluate RAG built with AWS Bedrock',
-    author='Soël Megdoud', 
-    url='https://git.apps.airliquide.com/GIO/NT/met/rag/aws_rag_toolkit', 
+    description='Toolkit to evaluate RAG built with llama_index on AWS',
+    author='SoelMgd',
     python_requires='>=3.7',  
 )
