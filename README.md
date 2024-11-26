@@ -10,27 +10,13 @@ This repository provides a toolkit for developers to evaluate RAG (Retrieval-Aug
 
 ## Getting Started
 
-1. **Create a virtual environment**:
-    ```bash
-    python -m venv dev_environment
-    ```
 
-2. **Activate the virtual environment**:
-    - On macOS/Linux:
-      ```bash
-      source dev_environment/bin/activate
-      ```
-    - On Windows:
-      ```bash
-      source dev_environment/Scripts/activate
-      ```
-
-3. **Install dependencies**:
+1. **Install dependencies**:
     ```bash
     pip install -r requirements.txt
     ```
 
-4. **Add your AWS credentials**:
+2. **Add your AWS credentials**:
    Create a file named `aws_credentials.cfg` and add the following content:
     ```ini
     [default]
